@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>World Clock</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.43/moment-timezone-with-data-1970-2030.js"></script>
   </head>
   <body>
     <div class="container">
@@ -18,20 +20,20 @@
         <option value="maui">Maui</option>
       </select>
 
-      <div class="city">
+      <div class="city" id="first-city">
         <div>
           <h2>Los Angeles</h2>
-          <div class="date">September 15, 2023</div>
+          <div class="date"></div>
         </div>
-        <div class="time">1:48:15 <small>AM</small></div>
+        <div class="time"></div>
       </div>
 
-      <div class="city">
+      <div class="city" id="second-city">
         <div>
-          <h2>Toledo</h2>
-          <div class="date">September 15, 2023</div>
+          <h2>Honolulu</h2>
+          <div class="date"></div>
         </div>
-        <div class="time">1:48:15 <small>AM</small></div>
+        <div class="time"></div>
       </div>
     </div>
     <footer>
@@ -41,6 +43,6 @@
       >
     </footer>
 
-    <script src="javacript/index.js"></script>
+    <script src="javascript/index.js"></script>
   </body>
 </html>
