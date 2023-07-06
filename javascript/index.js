@@ -29,11 +29,27 @@ function updateTime() {
       .tz("Pacific/Honolulu")
       .format("h:mm:ss [<small>] A [</small>]");
   }
+  let thirdCityElement = document.querySelector("#third-city");
+  if (thirdCityElement) {
+    let thirdCityDateElement = thirdCityElement.querySelector(".date");
+    //let secondCityDateElement = document.querySelector("#second-city .date")
+    let thirdCityTimeElement = thirdCityElement.querySelector(".time");
+
+    thirdCityDateElement.innerHTML = moment()
+      .tz("Pacific/Auckland")
+      .format("MMMM Do YYYY");
+    thirdCityTimeElement.innerHTML = moment()
+      .tz("Pacific/Auckland")
+      .format("h:mm:ss [<small>] A [</small>]");
+  }
 }
 
 function updateCity(event) {
   setInterval(function () {
     let cityTimeZone = event.target.value;
+    if (cityTimeZone === "current") {
+      cityTimeZone = moment.tz.guess();
+    }
     let cityTime = moment().tz(cityTimeZone);
     let cityName = cityTimeZone.replace("_", " ").split("/")[1];
     let citiesElement = document.querySelector("#cities");
