@@ -42,6 +42,18 @@ function updateTime() {
       .tz("Pacific/Auckland")
       .format("h:mm:ss [<small>] A [</small>]");
   }
+  let fourthCityElement = document.querySelector("#fourth-city");
+  if (fourthCityElement) {
+    let fourthCityDateElement = fourthCityElement.querySelector(".date");
+    let fourthCityTimeElement = fourthCityElement.querySelector(".time");
+
+    fourthCityDateElement.innerHTML = moment()
+      .tz("Indian/Maldives")
+      .format("MMMM Do YYYY");
+    fourthCityTimeElement.innerHTML = moment()
+      .tz("Indian/Maldives")
+      .format("h:mm:ss [<small>] A [</small>]");
+  }
 }
 
 function updateCity(event) {
