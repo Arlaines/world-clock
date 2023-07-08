@@ -10,10 +10,10 @@ function updateTime() {
     //firstCityTimeElement.innerHTML = firstCityTime.format("h:mm:ss [<small>] A [</small>]");
 
     firstCityDateElement.innerHTML = moment()
-      .tz("America/Los_Angeles")
+      .tz("Asia/Hong_Kong")
       .format("MMMM Do YYYY");
     firstCityTimeElement.innerHTML = moment()
-      .tz("America/Los_Angeles")
+      .tz("Asia/Hong_Kong")
       .format("h:mm:ss [<small>] A [</small>]");
   }
   let secondCityElement = document.querySelector("#second-city");
@@ -23,10 +23,10 @@ function updateTime() {
     let secondCityTimeElement = secondCityElement.querySelector(".time");
 
     secondCityDateElement.innerHTML = moment()
-      .tz("Pacific/Honolulu")
+      .tz("Europe/London")
       .format("MMMM Do YYYY");
     secondCityTimeElement.innerHTML = moment()
-      .tz("Pacific/Honolulu")
+      .tz("Europe/London")
       .format("h:mm:ss [<small>] A [</small>]");
   }
   let thirdCityElement = document.querySelector("#third-city");
@@ -36,10 +36,10 @@ function updateTime() {
     let thirdCityTimeElement = thirdCityElement.querySelector(".time");
 
     thirdCityDateElement.innerHTML = moment()
-      .tz("Pacific/Auckland")
+      .tz("Europe/Paris")
       .format("MMMM Do YYYY");
     thirdCityTimeElement.innerHTML = moment()
-      .tz("Pacific/Auckland")
+      .tz("Europe/Paris")
       .format("h:mm:ss [<small>] A [</small>]");
   }
   let fourthCityElement = document.querySelector("#fourth-city");
@@ -48,10 +48,10 @@ function updateTime() {
     let fourthCityTimeElement = fourthCityElement.querySelector(".time");
 
     fourthCityDateElement.innerHTML = moment()
-      .tz("Indian/Maldives")
+      .tz("America/New_York")
       .format("MMMM Do YYYY");
     fourthCityTimeElement.innerHTML = moment()
-      .tz("Indian/Maldives")
+      .tz("America/New_York")
       .format("h:mm:ss [<small>] A [</small>]");
   }
 }
